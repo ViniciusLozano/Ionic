@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Salário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating"> Digite o valor do Salário </ion-label>
+    <ion-input [(ngModel)]="salario"> </ion-input>
+  </ion-item>
+ 
+      <br>
+
+  <ion-radio-group [(ngModel)]="porcentagem">
+    <ion-item>
+      <ion-label>10%</ion-label>
+      <ion-radio slot="start" value='10'></ion-radio>
+    </ion-item>
+
+      <br>
+
+    <ion-item>
+      <ion-label>30%</ion-label>
+      <ion-radio slot="start" value='30'></ion-radio>
+    </ion-item>
+
+      <br>
+
+    <ion-item>
+      <ion-label>50%</ion-label>
+      <ion-radio slot="start" value='50'></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+      <br>  
+
+  <ion-button size="large" expand="full" color="success" (click)="calcular()">Calcular</ion-button>
+
+
+  <div id="result">
+    {{salarionovo}}
+
+  </div>
+
+</ion-content>

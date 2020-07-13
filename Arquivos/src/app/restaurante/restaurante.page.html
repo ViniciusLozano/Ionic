@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> 
+    <ion-title>restaurante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="imagem">
+    <img src="../../assets/restaurante.jpg">
+  </div>
+
+  <ion-item>
+    <ion-label>Consumo Total: </ion-label>
+    <ion-input type="number" [(ngModel)]="total"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Courvent Artístico: </ion-label>
+    <ion-input type="number" [(ngModel)]="couvert"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Dividir Conta Por? </ion-label>
+    <ion-input [(ngModel)]="pessoas"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="calcular()">Calcular</ion-button>
+
+  <div class="res">
+    <h2>Conta</h2>
+    <ion-item>
+      <ion-label>Taxa de Serviço (10%)</ion-label>
+      <ion-label>{{taxa}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Total a Pagar</ion-label>
+      <ion-label>{{totalPagar}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Valor por pessoa</ion-label>
+      <ion-label>{{pagarUnit}}</ion-label>
+    </ion-item>
+  </div>
+</ion-content>

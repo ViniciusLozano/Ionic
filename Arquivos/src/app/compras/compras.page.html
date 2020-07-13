@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons> 
+    <ion-title>compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header">
+    <ion-label style="font-size: 14pt;">Escolha Seu Produtos</ion-label>
+  </div>
+  <ion-item>
+    <ion-checkbox color="danger" checked="false" slot="start" [(ngModel)]="arroz"></ion-checkbox>
+    <ion-label>Arroz 1Kg (R$ 2,90)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="danger" slot="start" [(ngModel)]="leite"></ion-checkbox>
+    <ion-label>Leite 1Lt(R$ 4,50)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="danger" slot="start" [(ngModel)]="carne"></ion-checkbox>
+    <ion-label>Carne Friboi Kg (R$ 17,50)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="danger" slot="start" [(ngModel)]="feijao"></ion-checkbox>
+    <ion-label>Feijão 1Kg (R$ 3,40)</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-checkbox color="danger" slot="start" [(ngModel)]="refri"></ion-checkbox>
+    <ion-label>Refrigerante 1Litro (R$ 5,00)</ion-label>
+  </ion-item>
+  <ion-button expand="full" color="success" (click)="calcular()">Calcular</ion-button>
+  <div class="res">
+    <ion-label>R$: {{total}}</ion-label>
+  </div>
+</ion-content>
